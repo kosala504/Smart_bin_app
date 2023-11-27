@@ -65,32 +65,50 @@ class _MyStatefulWidgeState extends State<binStatus> {
                 IconButton(icon: Icon(Icons.more_vert), onPressed: () {}),
               ]),
 
-bottomNavigationBar: Container(
+          bottomNavigationBar: Container(
             color: Colors.white,
             child: const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15.0,vertical: 20.0),
-              
+              padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 20.0),
               child: GNav(
-                backgroundColor: Color.fromARGB(255, 128, 0, 0),
-                activeColor: Colors.white,
-                tabBackgroundColor: Color.fromARGB(255, 202, 117, 117),
-                gap: 8,
-                padding:EdgeInsets.all(5.0),
-                tabs: [
-                  GButton
-                  (
-                    icon: Icons.home,text: "Home",textColor: Color.fromARGB(255, 128, 0, 0),iconColor: Colors.white,                   
-                  ),
-                  GButton(icon: Icons.message,text: "Message",textColor: Color.fromARGB(255, 128, 0, 0),iconColor: Colors.white,),
-                  GButton(icon: Icons.search, text: "Search",textColor: Color.fromARGB(255, 128, 0, 0),iconColor: Colors.white,),
-                  GButton(icon: Icons.settings,text: "Settings",textColor: Color.fromARGB(255, 128, 0, 0),iconColor: Colors.white,),
-                  GButton(icon: Icons.notifications,text: "Notify",textColor: Color.fromARGB(255, 128, 0, 0),iconColor: Colors.white,),
-                ]
-                ),
-                
+                  backgroundColor: Color.fromARGB(255, 128, 0, 0),
+                  activeColor: Colors.white,
+                  tabBackgroundColor: Color.fromARGB(255, 202, 117, 117),
+                  gap: 8,
+                  padding: EdgeInsets.all(5.0),
+                  tabs: [
+                    GButton(
+                      icon: Icons.home,
+                      text: "Home",
+                      textColor: Color.fromARGB(255, 128, 0, 0),
+                      iconColor: Colors.white,
+                    ),
+                    GButton(
+                      icon: Icons.message,
+                      text: "Message",
+                      textColor: Color.fromARGB(255, 128, 0, 0),
+                      iconColor: Colors.white,
+                    ),
+                    GButton(
+                      icon: Icons.search,
+                      text: "Search",
+                      textColor: Color.fromARGB(255, 128, 0, 0),
+                      iconColor: Colors.white,
+                    ),
+                    GButton(
+                      icon: Icons.settings,
+                      text: "Settings",
+                      textColor: Color.fromARGB(255, 128, 0, 0),
+                      iconColor: Colors.white,
+                    ),
+                    GButton(
+                      icon: Icons.notifications,
+                      text: "Notify",
+                      textColor: Color.fromARGB(255, 128, 0, 0),
+                      iconColor: Colors.white,
+                    ),
+                  ]),
             ),
           ),
-
 
           backgroundColor: Color.fromARGB(255, 99, 8, 2),
           body: Column(
@@ -306,7 +324,7 @@ bottomNavigationBar: Container(
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: Text(
-                      'Bin 01',
+                      'Organic',
                       style: TextStyle(
                           fontFamily: 'Nunito+Sans',
                           fontSize: 18,
