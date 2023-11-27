@@ -342,7 +342,7 @@ class _MyStatefulWidgeState extends State<binStatus> {
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: Text(
-                      'Bin 02',
+                      'Paper',
                       style: TextStyle(
                           fontFamily: 'Nunito+Sans',
                           fontSize: 18,
@@ -360,7 +360,7 @@ class _MyStatefulWidgeState extends State<binStatus> {
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: Text(
-                      'Bin 03',
+                      'Plastic',
                       style: TextStyle(
                           fontFamily: 'Nunito+Sans',
                           fontSize: 18,
@@ -378,7 +378,7 @@ class _MyStatefulWidgeState extends State<binStatus> {
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: Text(
-                      'Bin 04',
+                      'Gass',
                       style: TextStyle(
                           fontFamily: 'Nunito+Sans',
                           fontSize: 18,
