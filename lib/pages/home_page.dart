@@ -84,6 +84,12 @@ class HomePage extends StatelessWidget {
                   textColor: Color.fromARGB(255, 128, 0, 0),
                   iconColor: Colors.white,
                 ),
+                GButton(
+                  icon: Icons.feedback,
+                  text: "Feedback",
+                  textColor: Color.fromARGB(255, 128, 0, 0),
+                  iconColor: Colors.white,
+                ),
               ]),
         ),
       ),
@@ -150,6 +156,22 @@ class HomePage extends StatelessWidget {
                 },
                 icon: const Icon(Icons.people),
                 label: const Text('User Profile'),
+              ),
+            ),
+            const SizedBox(height: 10),
+            SizedBox(
+              height: 75,
+              width: 350,
+              child: ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 202, 117, 117),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/feedback');
+                },
+                icon: const Icon(Icons.feedback),
+                label: const Text('Feedback'),
               ),
             ),
             const SizedBox(height: 20),
