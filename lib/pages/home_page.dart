@@ -168,7 +168,7 @@ class HomePage extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20))),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/feedback');
+                  Navigator.pushNamed(context, '/fb');
                 },
                 icon: const Icon(Icons.feedback),
                 label: const Text('Feedback'),
