@@ -49,7 +49,8 @@ class _LoginPageState extends State<LoginPage> {
         await firestore.collection('Users').doc(user.uid).set({
           'Name': user.displayName,
           'uid': user.uid,
-          'image': user.photoURL
+          'image': user.photoURL,
+          'email': user.email
         });
       }
     }
