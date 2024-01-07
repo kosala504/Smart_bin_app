@@ -1,0 +1,53 @@
+-- Create the database
+CREATE DATABASE IF NOT EXISTS Rohini_DB;
+USE Rohini_DB;
+
+-- Create the User table
+CREATE TABLE IF NOT EXISTS User (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Address VARCHAR(255) NOT NULL,
+    Tel_no VARCHAR(15) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    Reward_Points INT NOT NULL
+);
+
+-- Create the Bin table
+CREATE TABLE IF NOT EXISTS Bin (
+    BinID INT AUTO_INCREMENT PRIMARY KEY,
+    Location VARCHAR(255) NOT NULL,
+    Bin_Category INT,
+    FOREIGN KEY (Bin_Category) REFERENCES Bin_Category(CategoryID)
+);
+
+-- Create the Bin_Filled_Levels table
+CREATE TABLE IF NOT EXISTS Bin_Filled_Levels (
+    BinID INT,
+    fill_level INT NOT NULL,
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (BinID, date),
+    FOREIGN KEY (BinID) REFERENCES Bin(BinID)
+);
+
+-- Create the Bin_Category table
+CREATE TABLE IF NOT EXISTS Bin_Category (
+    CategoryID INT AUTO_INCREMENT PRIMARY KEY,
+    Category_Name VARCHAR(255) NOT NULL,
+    Color VARCHAR(7) NOT NULL,
+    Icon VARCHAR(255) NOT NULL
+);
+
+-- Create the User_Type table
+CREATE TABLE IF NOT EXISTS User_Type (
+    UserType_ID INT AUTO_INCREMENT PRIMARY KEY,
+    UserType VARCHAR(255) NOT NULL
+);
+
+-- Create the Reward table
+CREATE TABLE IF NOT EXISTS Reward (
+    UserID INT,
+    Reward_Points INT NOT NULL,
+    PRIMARY KEY (UserID),
+    FOREIGN KEY (UserID) REFERENCES User(ID)
+);
